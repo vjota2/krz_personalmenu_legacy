@@ -1,5 +1,3 @@
-TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
-
 do
 	local origRegisterServerEvent = RegisterServerEvent
 	local origEsxRegisterServerCallback = ESX.RegisterServerCallback

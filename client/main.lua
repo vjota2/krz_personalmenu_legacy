@@ -42,7 +42,6 @@ local societymoney, societymoney2 = nil, nil
 
 Citizen.CreateThread(function()
 	while ESX == nil do
-		TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
 		Citizen.Wait(10)
 	end
 
@@ -606,20 +605,20 @@ end
 
 function RenderInventoryMenu()
 	RageUI.DrawContent({header = true, instructionalButton = true}, function()
-		for i = 1, #ESX.PlayerData.inventory, 1 do
-			if ESX.PlayerData.inventory[i].count > 0 then
+		for k, v in ipairs(ESX.PlayerData.inventory) do
+			if v.count > 0 then
 				local invCount = {}
 
-				for i = 1, ESX.PlayerData.inventory[i].count, 1 do
+				for i = 1, v.count, 1 do
 					table.insert(invCount, i)
 				end
 
-				RageUI.List(ESX.PlayerData.inventory[i].label .. ' (' .. ESX.PlayerData.inventory[i].count .. ')', invCount, PersonalMenu.ItemIndex[ESX.PlayerData.inventory[i].name] or 1, nil, {}, true, function(Hovered, Active, Selected, Index)
+				RageUI.List(v.label .. ' (' .. v.count .. ')', invCount, PersonalMenu.ItemIndex[v.name] or 1, nil, {}, true, function(Hovered, Active, Selected, Index)
 					if (Selected) then
-						PersonalMenu.ItemSelected = ESX.PlayerData.inventory[i]
+						PersonalMenu.ItemSelected = v
 					end
 
-					PersonalMenu.ItemIndex[ESX.PlayerData.inventory[i].name] = Index
+					PersonalMenu.ItemIndex[v.name] = Index
 				end, RMenu.Get('inventory', 'actions'))
 			end
 		end
