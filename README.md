@@ -1,5 +1,8 @@
 # krz_personalmenu
-**krz_personalmenu** is a **PersonalMenu** for FiveM developed on top of [ESX](https://github.com/ESX-Org/es_extended) and [RageUI](https://github.com/iTexZoz/RageUI)
+**krz_personalmenu** is a **PersonalMenu** for FiveM developed on top of [ESX](https://github.com/esx-framework/esx-legacy) and [RageUI](https://github.com/iTexZoz/RageUI)
+
+### Note
+**This fork has been edited to work with latest [esx-legacy](https://github.com/esx-framework/esx-legacy)**
 
 ### Important
 - **You are not allowed to modify the resource name**
@@ -33,15 +36,15 @@
 This order also applies in the startup order.
 
 - [OneSync]
-- [es_extended](https://github.com/ESX-Org/es_extended)
-- [esx_addonaccount](https://github.com/ESX-Org/esx_addonaccount)
-- [esx_addoninventory](https://github.com/ESX-Org/esx_addoninventory)
-- [esx_datastore](https://github.com/ESX-Org/esx_datastore)
-- [esx_billing](https://github.com/ESX-Org/esx_billing)
-- [esx_society](https://github.com/ESX-Org/esx_society)
-- [skinchanger](https://github.com/ESX-Org/skinchanger)
-- [esx_skin](https://github.com/ESX-Org/esx_skin)
-- [esx_accessories](https://github.com/ESX-Org/esx_accessories)
+- [ESX](https://github.com/esx-framework/esx-legacy)
+- esx_addonaccount
+- esx_addoninventory
+- esx_datastore
+- esx_billing
+- esx_society
+- skinchanger
+- esx_skin
+- esx_accessories
 - Optional: [jsfour-idcard](https://github.com/jonassvensson4/jsfour-idcard)
 
 ### Download & Installation
